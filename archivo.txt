@@ -1,1 +1,2 @@
-cambio en master por efecto de reabase 
+Contenido de `master`
+Contenido de `rama_1`
