@@ -111,4 +111,8 @@ Esto asegura confiabilidad bajo restricciones de recursos.
 ### 4.2 Organización Modular del Código
 
 Propuesta de estructura:
-
+/src
+/app # lógica del sistema
+/drivers # controladores de hardware
+/rtos # FreeRTOS y configuración
+/hal # abstracción de hardware
