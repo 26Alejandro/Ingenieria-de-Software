@@ -116,3 +116,80 @@ Propuesta de estructura:
 /drivers # controladores de hardware
 /rtos # FreeRTOS y configuración
 /hal # abstracción de hardware
+
+
+Separar claramente facilita el mantenimiento y la reutilización.
+
+### 4.3 Git y GitHub
+
+**Buenas prácticas:**
+
+- `.gitignore` bien configurado
+- `README.md` completo
+- Commits claros
+- Uso de ramas (`feature`, `develop`, `main`)
+
+GitHub permite colaborar, versionar y documentar de forma eficiente.
+
+---
+
+## 5. Análisis de Temporización y Validación
+
+### 5.1 Puntos de Medición
+
+Usar pines GPIO o macros para marcar tiempo en secciones críticas, especialmente en tareas sensibles al tiempo.
+
+### 5.2 Herramientas
+
+- **Osciloscopios y analizadores lógicos**: para señales hardware
+- **Tracealyzer**: para monitoreo de tareas, colas y CPU
+
+Combinarlas permite una visión completa del comportamiento del sistema.
+
+### 5.3 Optimización
+
+Ajustar:
+
+- **Prioridades de tareas**
+- **Algoritmos**
+- **Duración de ejecución**
+
+Evita problemas como la inversión de prioridades.
+
+---
+
+## 6. Pruebas y Aseguramiento de la Calidad
+
+### 6.1 Pruebas Funcionales y de Temporización
+
+Validar que el sistema:
+
+- Se comporta correctamente (funcional)
+- Cumple sus plazos (temporal)
+
+Probar bajo condiciones reales y de estrés es clave.
+
+### 6.2 Pruebas Unitarias e Integración
+
+Adoptar "Shift-Left Testing":
+
+- Probar módulos (unitarias) desde el inicio
+- Verificar interfaces (integración)
+
+Detectar errores temprano ahorra tiempo y mejora la calidad del producto final.
+
+---
+
+## Conclusiones
+
+Los proyectos embebidos a pequeña escala no son simples; requieren:
+
+- Planificación rigurosa
+- Uso estratégico de patrones de diseño
+- Configuración cuidadosa del RTOS
+- Código eficiente y seguro
+- Validación con herramientas avanzadas
+
+Además, adoptar buenas prácticas de gestión con Git/GitHub permite escalar el desarrollo, mejorar la colaboración y mantener la trazabilidad del proyecto.
+
+---
