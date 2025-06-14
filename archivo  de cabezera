@@ -1,0 +1,36 @@
+/* main.h - Definiciones principales del sistema
+ * Autor: Laboratorio de Software Embebido
+ */
+
+#ifndef __MAIN_H
+#define __MAIN_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Includes */
+#include "stm32f4xx_hal.h"
+
+/* Definiciones de pines */
+#define LED_GREEN_Pin GPIO_PIN_5
+#define LED_GREEN_GPIO_Port GPIOA
+#define LED_YELLOW_Pin GPIO_PIN_6
+#define LED_YELLOW_GPIO_Port GPIOA
+#define LED_RED_Pin GPIO_PIN_7
+#define LED_RED_GPIO_Port GPIOA
+#define FAN_PWM_Pin GPIO_PIN_8
+#define FAN_PWM_GPIO_Port GPIOA
+
+/* Definiciones del sistema */
+#define SYSTEM_VERSION "v1.0"
+#define MAX_TEMP_SENSOR_ERROR_COUNT 3
+
+/* Prototipos de funciones de configuración */
+void Error_Handler(void);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __MAIN_H */
