@@ -1,4 +1,4 @@
-## 1. Descripción del Sistema
+![image](https://github.com/user-attachments/assets/bc9e5733-b13d-4751-833e-f515b6903270)## 1. Descripción del Sistema
 
 ### Caso de Estudio
 Sistema embebido de monitoreo de temperatura que controla automáticamente un ventilador basado en lecturas de sensores, con alarmas visuales y comunicación serie para monitoreo remoto.
@@ -14,11 +14,7 @@ Sistema embebido de monitoreo de temperatura que controla automáticamente un ve
 
 ## 2. Arquitectura del Sistema
 ### Diagrama de Bloques
-[Sensor Temp] → [Task Sensado] → [Cola de Datos] → [Task Procesamiento]
-↓
-[UART Debug] ← [Task Comunicación] ← [Cola Estados] ← [Task Control]
-↓
-[Actuadores: Fan + LEDs]
+![image](https://github.com/user-attachments/assets/d4ad7547-3c21-4dfe-bca2-24ce364a19a0)
 
 ### Componentes Principales
 - **Módulo de Sensado**: DHT22/DS18B20 para lectura de temperatura
@@ -77,37 +73,7 @@ Sistema embebido de monitoreo de temperatura que controla automáticamente un ve
 ---
 
 ## 5. Diagrama de Flujo del Sistema
-INICIO
-↓
-Inicializar Hardware + RTOS
-↓
-Crear Tareas y Colas
-↓
-┌─────────────────────────────────────┐
-│ Task Sensado (500ms) │
-│ - Leer temperatura │
-│ - Enviar a cola de datos │
-└─────────────────────────────────────┘
-↓
-┌─────────────────────────────────────┐
-│ Task Procesamiento (100ms) │
-│ - Recibir datos de cola │
-│ - Determinar nuevo estado │
-│ - Enviar comando a cola control │
-└─────────────────────────────────────┘
-↓
-┌─────────────────────────────────────┐
-│ Task Control (50ms) │
-│ - Procesar comandos │
-│ - Actualizar actuadores │
-│ - Cambiar estado LEDs/Ventilador │
-└─────────────────────────────────────┘
-↓
-┌─────────────────────────────────────┐
-│ Task Comunicación (1000ms) │
-│ - Enviar status por UART │
-│ - Procesar comandos remotos │
-└─────────────────────────────────────┘
+![image](https://github.com/user-attachments/assets/004b22fd-6b26-46b0-9c54-a513e10dd123)
 
 ---
 
